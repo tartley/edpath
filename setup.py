@@ -12,15 +12,18 @@ NAME = 'edpath'
 def read_file(filename):
     filename = join(dirname(__file__), filename)
     with open(filename) as fp:
-        return fp.read()
+        # return all lines apart from the first
+        # it is the same as the 'description'
+        lines = fp.readlines()
+    return lines[0], ''.join(lines[1:])
 
 
+description, long_description = read_file('README.txt')
 setup(
     name=NAME,
     version=VERSION,
-    description='MS Windows command line script '
-        'to view & edit PATH-like environment variables.',
-    long_description=read_file('README.txt'),
+    description=description,
+    long_description=long_description,
     keywords='terminal command-line windows path environment',
     author='Jonathan Hartley',
     author_email='tartley@tartley.com',

@@ -6,14 +6,16 @@ Retrieves the value of <varname> from the registry, (not the local environment)
 converts semi-colons into newlines and displays the result on stdout. For
 environment variables such as PATH, this format is more human-readable.
 
-If -e and -p are given, new processes will see the modified value, but existing
-processes (including the shell that invoked edpath) will not.
+If --edit is given, the output is instead displayed in $EDITOR. Saved changes
+will be written back to the registry. New processes will see the modified
+value, but existing processes (including the shell that invoked edpath) will
+not.
 
 Note that on Windows, environment variables are defined in one of two places
 in the registry, local machine and current user. local-machine values are
 overridden by the same names in current-user. The exception to this is the PATH
 variable, for which the current-user value is *appended* to the local-machine
-value.
+value. edpath works on current-user values, unless '--machine' is given.
 '''
 from contextlib import contextmanager
 import os

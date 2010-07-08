@@ -1,3 +1,5 @@
+MS Windows command-line script to view and edit PATH-like environment variables.
+
 Download and docs:
     http://pypi.python.org/pypi/edpath
 Development:
@@ -5,8 +7,6 @@ Development:
 
 Description
 -----------
-
-MS Windows command-line script to view and edit PATH-like environment variables.
 
 Running edpath displays entries from the PATH (or other named environment
 variable), with ';' separators replaced by newlines, so that each entry is on
