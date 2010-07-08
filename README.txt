@@ -20,10 +20,9 @@ Run with --help for description and usage.
 Requirements
 ------------
 
-MS Windows only. Only tested on Windows XP.
+Requires the following:
 
-Requires either:
-
+* MS Windows only. Only tested on Windows XP.
 * Python 2.6, 2.7 or 3.1
 * Package 'argparse' from http://pypi.python.org/pypi/argparse (not required
   on Python 2.7, it is built into the standard library.)
