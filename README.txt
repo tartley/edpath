@@ -20,13 +20,12 @@ Run with --help for description and usage.
 Requirements
 ------------
 
-Requires the following:
-
-* MS Windows only. Only tested on Windows XP.
+* Microsoft Windows. Only tested on Windows XP.
 * Python 2.6, 2.7 or 3.1
-* Package 'argparse' from http://pypi.python.org/pypi/argparse (not required
-  on Python 2.7, it is built into the standard library.)
-* pywin32, from http://sourceforge.net/projects/pywin32/files/
+* Package *pywin32*, from http://sourceforge.net/projects/pywin32/files/
+* Package *argparse*, using *easy_install*, or from http://pypi.python.org/pypi/argparse
+
+Argparse is not required on Python 2.7, it is built into the standard library.
 
 
 Status and Known Problems
