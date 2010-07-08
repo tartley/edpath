@@ -22,10 +22,15 @@ Requirements
 
 MS Windows only. Only tested on Windows XP.
 
-Requires Python 2.7.
+Requires either:
 
-Requires that pywin32 is installed, from:
-http://sourceforge.net/projects/pywin32/files/
+* Python 2.6 or 3.1, plus package 'argparse' from
+  http://pypi.python.org/pypi/argparse, or
+* Python 2.7 (argparse is built into the standard library)
+
+Plus, whichever Python is used, requires:
+
+* pywin32, from http://sourceforge.net/projects/pywin32/files/
 
 
 Status and Known Problems

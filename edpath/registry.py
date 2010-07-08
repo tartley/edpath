@@ -1,18 +1,27 @@
 
 import sys
-import os
 
 try:
     import win32con
     import win32gui
+except ImportError:
+    sys.exit('Error: pywin32 package missing. Install it from\n'
+        'http://sourceforge.net/projects/pywin32/files/')
+
+try:
+    # python 3
+    import winreg
+    from winreg import (
+        HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE,
+        KEY_ALL_ACCESS, KEY_READ, REG_EXPAND_SZ,
+    )
+except ImportError:
+    # python 2
     import _winreg as winreg
     from _winreg import (
         HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE,
         KEY_ALL_ACCESS, KEY_READ, REG_EXPAND_SZ,
     )
-except ImportError:
-    sys.exit('pywin32 must be installed, from '
-        'http://sourceforge.net/projects/pywin32/files/')
 
 
 # Registry key where environment variables are stored

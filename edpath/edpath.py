@@ -26,8 +26,9 @@ from tempfile import mkstemp
 try:
     import argparse
 except ImportError:
-    sys.exit("Error: Must run under Python 2.7 or 3.2, "
-        "or install 'argparse' module")
+    sys.exit("Error: 'argparse' module missing. Install it from "
+        "http://pypi.python.org/pypi/argparse\n"
+        "or run under Python 2.7 which has it built in.")
 
 from .registry import get_env_registry, set_env_registry
 
@@ -93,7 +94,7 @@ def read_from_file(filename):
 def edit_path(path):
     with tempfile() as (fp, filename):
         if path:
-            os.write(fp, path)
+            os.write(fp, path.encode())
         os.close(fp) # so that EDITOR can write to the tempfile
         subprocess.call([os.environ['EDITOR'], filename])
         return read_from_file(filename)    
