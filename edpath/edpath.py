@@ -13,9 +13,9 @@ not.
 
 Note that on Windows, environment variables are defined in one of two places
 in the registry, local machine and current user. local-machine values are
-overridden by the same names in current-user. The exception to this is the PATH
+overridden by the values in current-user. The exception to this is the PATH
 variable, for which the current-user value is *appended* to the local-machine
-value. edpath works on current-user values, unless '--machine' is given.
+value. edpath works on current-user values, unless --machine is given.
 '''
 from contextlib import contextmanager
 import os
