@@ -8,10 +8,16 @@ Description
 
 MS Windows command-line script to view and edit PATH-like environment variables.
 
+Running edpath displays entries from the PATH (or other named environment
+variable), with ';' separators replaced by newlines, so that each entry is on
+its own line. Running with -e displays this in $EDITOR, and saved changes are
+written back to the registry, where they will be picked up by all new
+processes.
+
 Run with -h for description and usage.
 
 
-Dependencies
+Requirements
 ------------
 
 MS Windows only. Only tested on Windows XP.
@@ -31,12 +37,12 @@ If you have comments or it doesn't work for you or you find bugs, I'd love to
 hear about it. -tartley@tartley.com
 
 
-TODO
+Todo
 ----
 
   * invert the sense of options.machine to get rid of all those nots
-  * upload to pypi
-  * produce a standalone py2exe version?
+  * support more versions of Python
+  * produce a standalone py2exe version
   * store backups of old PATH values in case user trashes their PATH?
   * make Linux-friendly. Presumably we can only display the output there, not
     persist it.

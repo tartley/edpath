@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''
-MS Windows command line script to view or edit the PATH environment variable.
+MS Windows command line script to view or edit PATH-like environment variables.
 
 Retrieves the value of <varname> from the registry, (not the local environment)
 converts semi-colons into newlines and displays the result on stdout. For
