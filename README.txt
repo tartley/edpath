@@ -16,9 +16,7 @@ Dependencies
 
 MS Windows only. Only tested on Windows XP.
 
-Requires Python 2.7 (tested)
-or possibly
-Python 2.5, 2.6, 3.1 with package 'argparse' installed (not tested.)
+Requires Python 2.7.
 
 Requires that pywin32 is installed, from:
 http://sourceforge.net/projects/pywin32/files/
@@ -27,10 +25,10 @@ http://sourceforge.net/projects/pywin32/files/
 Status and Known Problems
 -------------------------
 
-Feature complete.
-No known issues.
-If you have comments or find bugs, PLEASE let me know, many thanks.
-    -tartley@tartley.com
+Feature complete. No known issues.
+
+If you have comments or it doesn't work for you or you find bugs, I'd love to
+hear about it. -tartley@tartley.com
 
 
 TODO

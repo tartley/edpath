@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 '''
 MS Windows command line script to view or edit the PATH environment variable.
 
@@ -16,9 +15,6 @@ overridden by the same names in current-user. The exception to this is the PATH
 variable, for which the current-user value is *appended* to the local-machine
 value.
 '''
-
-
-
 from contextlib import contextmanager
 import os
 import subprocess
