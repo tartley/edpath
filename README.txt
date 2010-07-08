@@ -10,11 +10,11 @@ Description
 
 Running edpath displays entries from the PATH (or other named environment
 variable), with ';' separators replaced by newlines, so that each entry is on
-its own line. Running with -e displays this in $EDITOR, and saved changes are
-written back to the registry, where they will be picked up by all new
+its own line. Running with --edit displays this in $EDITOR, and saved changes
+are written back to the registry, where they will be picked up by all new
 processes.
 
-Run with -h for description and usage.
+Run with --help for description and usage.
 
 
 Requirements
@@ -24,12 +24,9 @@ MS Windows only. Only tested on Windows XP.
 
 Requires either:
 
-* Python 2.6 or 3.1, plus package 'argparse' from
-  http://pypi.python.org/pypi/argparse, or
-* Python 2.7 (argparse is built into the standard library)
-
-Plus, whichever Python is used, requires:
-
+* Python 2.6, 2.7 or 3.1
+* Package 'argparse' from http://pypi.python.org/pypi/argparse (not required
+  on Python 2.7, it is built into the standard library.)
 * pywin32, from http://sourceforge.net/projects/pywin32/files/
 
 
@@ -45,8 +42,6 @@ hear about it. -tartley@tartley.com
 Todo
 ----
 
-  * invert the sense of options.machine to get rid of all those nots
-  * support more versions of Python
   * produce a standalone py2exe version
   * store backups of old PATH values in case user trashes their PATH?
   * make Linux-friendly. Presumably we can only display the output there, not
