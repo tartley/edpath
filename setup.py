@@ -58,7 +58,8 @@ setup(
     options={
         'py2exe':{
             'dist_dir': r'dist\%s' % (WIN_BINARY,),
-            'optimize': 2,
+            # can't optimise, strips docstrings, used for usage text.
+            # 'optimize': 2,
             'excludes': [
                 'dummy.Process',
                 'email',

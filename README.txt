@@ -40,15 +40,16 @@ hear about it. -tartley@tartley.com
 Todo
 ----
 
-  * convert makefile to bin\.sh files?
-  * modify setup.py to split readme by paras, not lines
-  * gracefully handle EDITOR not set or doesn't exist
-  * reasses README / usage: which is for which audiences?
-  * needs a canonical webpage for *users* (not python devs)
-  * store backups of old PATH values in case user trashes their PATH?
-  * option to output on stdout in ';' delimited form
-  * make Linux-friendly. Presumably we can only display the output there, not
-    persist it.
+* stop using module doctrings for usage text, it fails with -O
+* strip out unneeded modules in py2exe output
+* gracefully handle EDITOR not set or doesn't exist
+* modify setup.py to split readme by paras, not lines. see setup-fix.py
+* convert makefile to bin\.sh files?
+* reasess README / usage: which is for which audiences?
+* needs a canonical webpage for *users* (not python devs)
+* store backups of old PATH values in case user trashes their PATH?
+* option to output on stdout in ';' delimited form
+* make Linux-friendly. Presumably we can only display the output there, not persist it.
 
 
 Thanks
@@ -60,5 +61,7 @@ how to read & modify environment variables in the Windows registry.
 Changes
 -------
 
-0.1.0 Initial release. Feature complete.
+* 0.1.4 Add stand-alone executable.
+* 0.1.1 Improvements to documentation and usage text.
+* 0.1.0 Initial release. Displays PATH & other variables, allows editing.
 
