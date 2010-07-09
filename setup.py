@@ -2,6 +2,7 @@
 
 from os.path import dirname, join
 from distutils.core import setup
+import py2exe
 
 from edpath import VERSION
 
@@ -30,7 +31,8 @@ setup(
     url='http://code.google.com/p/edpath/',
     license='BSD',
     packages=[NAME],
-    scripts=['edpath-script.py', 'edpath.bat'],
+    console=['edpath.py'],
+    scripts=['edpath.py', 'edpath.bat'],
     #data_files=[('package', ['files'])],
     # see classifiers http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[

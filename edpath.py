@@ -1,5 +1,5 @@
 #!/usr/bin/env python
 
-from edpath.edpath import main
+from edpathmod.edpath import main
 main()
 
