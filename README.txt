@@ -40,8 +40,13 @@ hear about it. -tartley@tartley.com
 Todo
 ----
 
-  * produce a standalone py2exe version
+  * convert makefile to bin\.sh files?
+  * modify setup.py to split readme by paras, not lines
+  * gracefully handle EDITOR not set or doesn't exist
+  * reasses README / usage: which is for which audiences?
+  * needs a canonical webpage for *users* (not python devs)
   * store backups of old PATH values in case user trashes their PATH?
+  * option to output on stdout in ';' delimited form
   * make Linux-friendly. Presumably we can only display the output there, not
     persist it.
 
