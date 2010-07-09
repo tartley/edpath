@@ -38,7 +38,7 @@ def process_args():
     default to current user (True), -m switches to local machine (False)
     '''
     # get script description from this module's docstring
-    module_docs = sys.modules['edpathmod.edpath'].__doc__.split('\n\n')
+    module_docs = sys.modules['edpath_package.edpath'].__doc__.split('\n\n')
     short_desc = module_docs[0]
     long_desc = '\n\n'.join(module_docs[1:])
 

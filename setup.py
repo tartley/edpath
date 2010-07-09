@@ -4,17 +4,18 @@ from os.path import dirname, join
 from distutils.core import setup
 import py2exe
 
-from edpath import VERSION
+from edpath_package import VERSION
 
 
 NAME = 'edpath'
+
+MS_VISUAL_C_RUNTIME_DIR = '..\\ms-visual-c-runtimes\\Microsoft.VC90.CRT\\'
+WIN_BINARY = '%s-windows-%s' % (NAME, VERSION)
 
 
 def read_file(filename):
     filename = join(dirname(__file__), filename)
     with open(filename) as fp:
-        # return all lines apart from the first
-        # it is the same as the 'description'
         lines = fp.readlines()
     return lines[0], ''.join(lines[1:])
 
@@ -30,9 +31,8 @@ setup(
     author_email='tartley@tartley.com',
     url='http://code.google.com/p/edpath/',
     license='BSD',
-    packages=[NAME],
-    console=['edpath.py'],
-    scripts=['edpath.py', 'edpath.bat'],
+    packages=['edpath_package'],
+    scripts=[NAME+'.py', NAME+'.bat'],
     #data_files=[('package', ['files'])],
     # see classifiers http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -47,6 +47,29 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.1',
         'Topic :: Terminals',
-    ]
+    ],
+
+    # py2exe
+    data_files = [("Microsoft.VC90.CRT", [
+        MS_VISUAL_C_RUNTIME_DIR + 'Microsoft.VC90.CRT.manifest',
+        MS_VISUAL_C_RUNTIME_DIR + 'msvcr90.dll',
+    ] )],
+    console=['edpath.py'],
+    options={
+        'py2exe':{
+            'dist_dir': r'dist\%s' % (WIN_BINARY,),
+            'optimize': 2,
+            'excludes': [
+                'dummy.Process',
+                'email',
+                'email.utils',
+                'Image',
+                'multiprocessing',
+                'Tkinter',
+                '_hashlib',
+                '_ssl',
+            ],            
+        },
+    },
 )
 
